@@ -1,7 +1,7 @@
 """
 DMoN baseline vs Feature-kNN DMoN on heterophilic graphs.
 
-DMoN (Deep Modularity Networks, ICML 2021) uses a differentiable modularity
+DMoN (Graph Clustering with Graph Neural Networks, JMLR 2023) uses a differentiable modularity
 loss, similar to DGCluster.  We show the same kNN replacement also improves
 DMoN, demonstrating that the fix generalizes beyond DGCluster.
 
