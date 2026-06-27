@@ -27,10 +27,10 @@ pip install -r requirements.txt
 
 ```bash
 # Baseline (structural graph)
-python main_hetero.py --dataset texas --knn 0
+python main_hetero.py --dataset texas --knn 0 --cluster kmeans
 
 # Ours (feature kNN graph, k=5)
-python main_hetero.py --dataset texas --knn 5
+python main_hetero.py --dataset texas --knn 5 --cluster kmeans
 
 # Supported datasets: texas, cornell, wisconsin, chameleon, actor, cora
 ```
