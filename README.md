@@ -3,7 +3,7 @@
 Official implementation for:
 
 > **Feature-Driven Graph Reconstruction for Modularity-Based Clustering on Heterophilic Graphs**  
-> *Submitted to Neural Computing & Applications (NCA)*
+> *Submitted to Neural Computing & Applications (NCA)* — Manuscript **NCAA-D-26-03736** (2026-06-30)
 
 Paper: modularity methods (DGCluster, DMoN) fail on heterophilic graphs because **B = A − dd^T/(2|E|)** collapses when structural homophily is low. We replace the structural adjacency with a **feature k-NN graph** (drop-in, no architecture change) and use the **Δ criterion** (Δ = h_kNN − h_struct) to predict when substitution helps.
 
