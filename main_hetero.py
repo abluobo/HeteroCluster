@@ -1,14 +1,13 @@
 """
-Feature-Similarity-Weighted Modularity for Heterophilic Graph Clustering.
+DGCluster with feature k-NN graph substitution for heterophilic graph clustering.
 
-Key idea: Standard modularity assumes homophily (connected nodes → same cluster).
-On heterophilic graphs this fails. We weight the adjacency by cosine similarity:
-    w_ij = tanh(beta * cos_sim(x_i, x_j))
-so dissimilar-feature edges get negative weight (anti-modularity: repel from same cluster).
+On heterophilic graphs, structural modularity collapses (B ≈ 0). Replacing the
+adjacency used in the modularity loss with a feature k-NN graph restores the objective.
 
 Usage:
-    python main_hetero.py --dataset texas --lam 0.0 --beta 0.0  # baseline (standard DGCluster)
-    python main_hetero.py --dataset texas --lam 0.0 --beta 2.0  # feature-weighted (ours)
+    python main_hetero.py --dataset texas --knn 0 --cluster kmeans   # structural baseline
+    python main_hetero.py --dataset texas --knn 10 --cluster kmeans  # ours (paper default)
+    python main_hetero.py --dataset cora --knn 5 --cluster kmeans    # negative control
 """
 
 import numpy as np
